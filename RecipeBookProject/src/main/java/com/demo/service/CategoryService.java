@@ -1,13 +1,14 @@
 package com.demo.service;
 
-import com.demo.dto.CategoryDTO;
-import com.demo.model.Category;
-import com.demo.repository.CategoryRepository;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import com.demo.dto.CategoryDTO;
+import com.demo.model.Category;
+import com.demo.repository.CategoryRepository;
 
 @Service
 @Transactional
@@ -15,7 +16,7 @@ public class CategoryService {
 
     @Autowired
     private CategoryRepository categoryRepository;
-
+    
     // Create a new category
     public Category save(CategoryDTO categoryDTO) {
         Category category = new Category();
